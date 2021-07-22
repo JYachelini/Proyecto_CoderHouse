@@ -358,14 +358,14 @@ a:hover {
   transition: -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-  -webkit-transform: scale3d(1.05, 1.05, 1);
-          transform: scale3d(1.05, 1.05, 1);
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
   cursor: pointer;
 }
 
 .noticias__articulos div article:hover {
-  -webkit-transform: scale3d(1.001, 1.001, 1);
-          transform: scale3d(1.001, 1.001, 1);
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+          transform: scale3d(0.9, 0.9, 1);
 }
 
 .patchs__description--text {
@@ -691,8 +691,7 @@ footer div div {
 
 .personajes__display div {
   background-color: #111111d6;
-  width: 200px;
-  height: 270px;
+  width: 20%;
   background-size: cover;
   margin: 5vh 0;
   cursor: pointer;
