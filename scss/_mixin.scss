@@ -1,0 +1,43 @@
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+
+@mixin border($px, $color){
+    border: $px solid $color;
+}
+
+@mixin header{
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-bottom: 0 !important;
+    height: 100%;
+}
+
+@mixin footer {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin banner{
+    display: flex;
+    height: 10vh;
+    width: 80%;
+    color: white;
+    margin: 4vh auto;
+    font-size: 20px;
+    @include border-radius(0.25rem);
+    border: 1px solid #333;
+    background: linear-gradient(to right,  rgb(5,28,36) 0%,rgb(11,53,79) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    div{
+        margin: auto;
+    }
+}
+
+@mixin bg-image($image, $size){
+    background-image: $image;
+    background-size: cover;
+    height: $size;
+}

@@ -1,0 +1,8 @@
+
+
+@each $sideImagen in side1, side2, side3, side4{
+    ##{$sideImagen}{
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+}
