@@ -413,7 +413,8 @@ footer{
 
 .section__tabla{
     background-color: #1B1B1B78;
-    width: 800px;
+    max-width: 800px;
+    width: 50%;
     margin: 0 auto;
     color: white;
     @include border-radius(0.75rem);
@@ -742,6 +743,7 @@ footer{
     margin: 0 auto 5vh auto;
     background: url(../media/bg-news-top.jpg) top center no-repeat, url(../media/bg-news-repeat.jpg) repeat;
     border-radius: 0.75rem;
+    max-width: 800px;
 }
 .ranking{
     margin: 25px auto 0 auto;
