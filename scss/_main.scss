@@ -527,13 +527,13 @@ footer{
         }
         a {
             display: block;
-            transform: scale3d(1.05, 1.05, 1);
+            transform: scale3d(1.0, 1.0, 1);
             transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
             img{
             width: 100%
             }
             &:hover{
-                transform: scale3d(1.001, 1.001, 1);
+                transform: scale3d(0.9, 0.9, 1);
             }
         }
     }
