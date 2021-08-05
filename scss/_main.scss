@@ -403,7 +403,7 @@ footer{
             font-size: 8px;
             font-weight: 300;
             text-decoration-line: underline;
-            color: #595959;
+            color: #9d9797;
             margin: 0 16px;
         }
     }
@@ -897,6 +897,8 @@ footer{
 .section__logIn__form{
     background-color: #f9f9f9;
     color: #111111;
+    margin: 130px;
+    max-width: 300px;
     &:nth-child(1){
         padding: 3rem 2rem;
     }
