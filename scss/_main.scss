@@ -53,6 +53,70 @@ a{
     border: 1px solid black;
 }
 
+// Button go top
+
+.go-top-conteiner{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background: #e20b0b;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: .2s;
+    i{
+        position: absolute;
+        font-size: 1rem;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: #fff;
+        transition: .2s;
+    }
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 2.6rem;
+    height: 2.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4rem;
+        height: 4rem;
+    }
+    100%{
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
 /* Modal*/
 .modalCustom{
     width: 100%;
@@ -591,6 +655,7 @@ footer{
         cursor: pointer;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         h5{
             background: #010000;
             color: #d5b402;
@@ -604,13 +669,27 @@ footer{
             transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
             margin: auto;
             img{
-            width: 100%
+            width: 100%;
+            bottom: -10px;
+            position: relative;
             }
             &:hover{
                 transform: scale3d(0.9, 0.9, 1);
             }
         }
     }
+}
+
+.dk a img{
+    left: 10px;
+}
+
+.mg a img{
+    width: 125% !important;
+}
+
+.slayer a img{
+    bottom: -15px !important;
 }
 
 .gc{
