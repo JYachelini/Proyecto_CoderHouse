@@ -68,8 +68,8 @@ a:hover {
 .go-top-button {
   width: 0rem;
   height: 0rem;
-  background: #e20b0b;
-  border: 2px solid #333;
+  background: #e4e4e4;
+  border: 2px solid black;
   border-radius: 50%;
   cursor: pointer;
   top: 50%;
@@ -88,7 +88,7 @@ a:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
-  color: #fff;
+  color: black;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -116,8 +116,8 @@ a:hover {
     height: 0rem;
   }
   50% {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   100% {
     width: 2.6rem;
@@ -131,8 +131,8 @@ a:hover {
     height: 0rem;
   }
   50% {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   100% {
     width: 2.6rem;

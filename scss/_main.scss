@@ -67,8 +67,8 @@ a{
 .go-top-button{
     width: 0rem;
     height: 0rem;
-    background: #e20b0b;
-    border: 2px solid #333;
+    background: #e4e4e4;
+    border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
     top: 50%;
@@ -82,7 +82,7 @@ a{
         top: 48%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
-        color: #fff;
+        color: black;
         transition: .2s;
     }
 }
@@ -108,8 +108,8 @@ a{
         height: 0rem;
     }
     50%{
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
     }
     100%{
         width: 2.6rem;
