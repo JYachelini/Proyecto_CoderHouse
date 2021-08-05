@@ -432,12 +432,8 @@ a:hover {
 }
 
 .noticias__articulos div article:hover {
-  -webkit-transform: scale3d(0.98, 0.98, 1);
-          transform: scale3d(0.98, 0.98, 1);
-}
-
-.noticias__articulos div article a img {
-  border-radius: .25rem;
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+          transform: scale3d(0.9, 0.9, 1);
 }
 
 .patchs__description--text {
@@ -520,7 +516,7 @@ footer div div {
   text-transform: none !important;
 }
 
-.footer__derechos p {
+.footer__derechos span {
   color: #595959;
 }
 
@@ -922,18 +918,22 @@ footer div div {
 }
 
 .sideImagen {
+  background-image: url("../media/carrousel.jpg");
+  background-size: cover;
+  height: 200px;
   margin: 2vh auto;
 }
 
 .noticias__imagen {
   width: 50%;
   margin: 2vh;
+  background-image: url(../media/carrousel.jpg);
   background-size: cover;
-  border-radius: .25rem;
 }
 
 .noticias--author {
   font-size: 10px;
+  padding-top: 19%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -953,17 +953,6 @@ footer div div {
 
 .noticias--texto {
   font-size: 15px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .noticias--textoConteiner {
@@ -1068,25 +1057,10 @@ footer div div {
   height: 100vh;
 }
 
-.ranking__home section {
+.ranking__home div {
+  padding-top: 80vh;
   font-size: 40px;
   color: wheat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-}
-
-.ranking__home section div {
-  margin: auto;
-  background-color: #111111;
-  border-radius: .75rem;
-  width: 250px;
-  border: 2px solid wheat;
-}
-
-.ranking__home section div h1 {
-  margin: 0 !important;
 }
 
 .section__rankings {
