@@ -76,18 +76,20 @@
 	</header>
 
 	<div class="ranking__home">
-		<div>
-			<h1 class="mayus">Rankings</h1>
-		</div>
+		<section>
+			<div>
+				<h1 class="mayus">Rankings</h1>
+			</div>
+		</section>
 	</div>
 	<div class="section__rankings">
 		<div class="section__rankings--table">
 			<div class="ranking__types">
-				<a href="">TOP LEVEL</a>
-				<a href="">TOP GUILDS</a>
-				<a href="">TOP KILLERS</a>
-				<a href="">TOP DUELS</a>
-				<a href="">TOP EVENTS</a>
+				<a type="button" data-toggle="modal" data-target="#modalNoticia">TOP LEVEL</a>
+				<a type="button" data-toggle="modal" data-target="#modalNoticia">TOP GUILDS</a>
+				<a type="button" data-toggle="modal" data-target="#modalNoticia">TOP KILLERS</a>
+				<a type="button" data-toggle="modal" data-target="#modalNoticia">TOP DUELS</a>
+				<a type="button" data-toggle="modal" data-target="#modalNoticia">TOP EVENTS</a>
 			</div>
 			<table class="ranking tabla__info">
 				<thead>
@@ -177,7 +179,7 @@
 				</ul>
 			</div>
 			<div class="footer__derechos">
-				<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora consequuntur vel a ad dolores ex earum, aspernatur, sunt voluptatem hic laborum vitae impedit inventore quas pariatur labore aliquam officiis!</span>
+				<p>™ & © 2021 Verux Gaming, Inc. Todos los derechos reservados.</p>
 			</div>
 			<div>
 				<ul class="footer__legalLinks">
@@ -197,6 +199,22 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Modal -->
+	<div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="modalNoticiaLabel">¡Próximamente!</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body" style="text-transform: none;">
+			Lamentablemente, todavía no esta lista esta sección :(
+			</div>
+		</div>
+		</div>
+	</div>
 	<script src="js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

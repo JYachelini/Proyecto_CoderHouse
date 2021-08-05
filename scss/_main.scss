@@ -323,7 +323,10 @@ a{
         transform: scale3d(1.0, 1.0, 1);
         cursor: pointer;
         &:hover{
-            transform: scale3d(0.9, 0.9, 1);
+            transform: scale3d(0.98, 0.98, 1);
+        }
+        a img{
+            border-radius: .25rem;
         }
     }
 }
@@ -386,7 +389,7 @@ footer{
 .footer__derechos{
     max-width: 500px;
     text-transform: none !important;
-    span{
+    p{
         color: #595959;
     }
 }
@@ -678,20 +681,20 @@ footer{
 }
 
 .sideImagen{
-    @include bg-image(url("../media/carrousel.jpg"), 200px);
+    // @include bg-image(url("../media/carrousel.jpg"), 200px);
     margin: 2vh auto;
 }
 
 .noticias__imagen{
     width: 50%;
     margin: 2vh;
-    background-image: url(../media/carrousel.jpg);
     background-size: cover;
+    border-radius: .25rem;
 }
+
 
 .noticias--author{
     font-size: 10px;
-    padding-top: 19%;
     display: flex;
     justify-content: space-between;
     span a:hover{
@@ -704,6 +707,10 @@ footer{
 
 .noticias--texto{
     font-size: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .noticias--textoConteiner{
@@ -778,10 +785,21 @@ footer{
 /* ranking.html */
 .ranking__home{
     @include bg-image(url("../media/image.jpg"), 100vh);
-    div{
-        padding-top: 80vh;
+    section{
         font-size: 40px;
         color: wheat;
+        display: flex;
+        height: 100%;
+        div{
+            margin: auto;
+            background-color: #111111;
+            border-radius: .75rem;
+            width: 250px;
+            border: 2px solid wheat;
+            h1{
+                margin: 0 !important;
+            }
+        }
     }
 }
 .section__rankings{
