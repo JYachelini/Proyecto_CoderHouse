@@ -262,6 +262,7 @@ a:hover {
 .section__home {
   background-image: url("../media/yacheuwu.png");
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -438,6 +439,7 @@ a:hover {
 
 .noticias__articulos div article a img {
   border-radius: .25rem;
+  max-height: 329px;
 }
 
 .patchs__description--text {
@@ -552,6 +554,7 @@ footer div div {
 .info {
   background-image: url("../media/Kq2B0b.jpg");
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -722,6 +725,7 @@ footer div div {
 .personajes__home {
   background-image: url("../media/bg_main_media.jpg");
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -743,6 +747,12 @@ footer div div {
   width: 50%;
 }
 
+.personajes__bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#111111));
+  background: linear-gradient(to bottom, black 0%, #111111 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .personajes {
   display: inline-block;
   width: 80%;
@@ -753,9 +763,9 @@ footer div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 25px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -763,10 +773,17 @@ footer div div {
 
 .personajes__display div {
   background-color: #111111d6;
-  width: 20%;
+  width: calc(20% - 20px);
   background-size: cover;
-  margin: 5vh 0;
+  margin: 5vh 20px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .personajes__display div h5 {
@@ -782,6 +799,7 @@ footer div div {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  margin: auto;
 }
 
 .personajes__display div a img {
@@ -801,6 +819,7 @@ footer div div {
 .section__noticias {
   background-image: url("../media/bg_main_info.jpg");
   background-size: cover;
+  background-position: center;
   height: 50vh;
 }
 
@@ -979,6 +998,7 @@ footer div div {
 .patch__home {
   background-image: url("../media/mu_forum_bg.jpg");
   background-size: cover;
+  background-position: center;
   height: 70vh;
 }
 
@@ -1022,6 +1042,7 @@ footer div div {
 .galery__home {
   background-image: url("../media/demacia_03.jpg");
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -1043,13 +1064,38 @@ footer div div {
 }
 
 .galery__section {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
 }
 
-.galery__section div {
+.gallery__section--wrapper {
+  -webkit-column-count: 3;
+          column-count: 3;
+}
+
+.gallery__section--wrapper li {
+  border-radius: .75rem;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img-wrapper img {
   width: 100%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+.img-wrapper img:hover {
+  -webkit-transform: scale3d(0.98, 0.98, 1);
+          transform: scale3d(0.98, 0.98, 1);
 }
 
 .galery__video {
@@ -1065,12 +1111,12 @@ footer div div {
 .ranking__home {
   background-image: url("../media/image.jpg");
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
 .ranking__home section {
   font-size: 40px;
-  color: wheat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1083,10 +1129,25 @@ footer div div {
   border-radius: .75rem;
   width: 250px;
   border: 2px solid wheat;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.ranking__home section div h1 {
+.ranking__home section div:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  background-color: #1b1b1b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ranking__home section div a {
   margin: 0 !important;
+  color: wheat;
+}
+
+.ranking__home section div a:hover {
+  color: wheat !important;
 }
 
 .section__rankings {

@@ -39,5 +39,6 @@
 @mixin bg-image($image, $size){
     background-image: $image;
     background-size: cover;
+    background-position: center;
     height: $size;
 }

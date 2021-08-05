@@ -327,6 +327,7 @@ a{
         }
         a img{
             border-radius: .25rem;
+            max-height: 329px;
         }
     }
 }
@@ -556,6 +557,10 @@ footer{
     }
 }
 
+.personajes__bg{
+    background: linear-gradient(to bottom,  rgb(0,0,0) 0%,rgb(17,17,17) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .personajes{
     display: inline-block;
     width: 80%;
@@ -564,15 +569,17 @@ footer{
 
 .personajes__display{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 25px;
     flex-wrap: wrap;
     div{
         background-color: #111111d6;
-        width: 20%;
+        width: calc(20% - 20px);
         background-size: cover;
-        margin: 5vh 0;
+        margin: 5vh 20px;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
         h5{
             background: #010000;
             color: #d5b402;
@@ -584,6 +591,7 @@ footer{
             display: block;
             transform: scale3d(1.0, 1.0, 1);
             transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            margin: auto;
             img{
             width: 100%
             }
@@ -765,11 +773,30 @@ footer{
 }
 
 .galery__section{
+    width: 90%;
     display: flex;
-    div{
-        width: 100%;
-    }
+    margin: auto;
+    justify-content: center;
+    margin-top: 15px;
 }
+.gallery__section--wrapper{
+        column-count: 3;
+        li{
+            border-radius: .75rem;
+            display: inline-block;
+            overflow: hidden;
+        }
+}
+
+.img-wrapper img{
+    width: 100%;
+            transform: scale3d(1.0, 1.0, 1);
+            transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            &:hover{
+                transform: scale3d(0.98, 0.98, 1);
+            }
+}
+
 
 .galery__video{
     width: 100%;
@@ -787,7 +814,6 @@ footer{
     @include bg-image(url("../media/image.jpg"), 100vh);
     section{
         font-size: 40px;
-        color: wheat;
         display: flex;
         height: 100%;
         div{
@@ -796,8 +822,18 @@ footer{
             border-radius: .75rem;
             width: 250px;
             border: 2px solid wheat;
-            h1{
+            transition: .4s;
+            &:hover{
+                filter: brightness(120%);
+                background-color: #1b1b1b;
+                transition: .4s;
+            }
+            a{
                 margin: 0 !important;
+                color: wheat;
+                &:hover{
+                    color: wheat !important;
+                }
             }
         }
     }

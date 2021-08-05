@@ -26,7 +26,7 @@
 		<nav class="navBar navbar navbar-expand-lg navbar-dark">
 			<div class="col-8 col-lg-2">
 				<div class="flex">
-					<a href=""><img class="logo wow animate__animated animate__rotateInDownLeft" src="media/logobase.png"></a>
+					<a href="https://verux.gg/"><img class="logo wow animate__animated animate__rotateInDownLeft" src="media/logobase.png"></a>
 					<span class="separador wow animate__animated animate__fadeInDown"></span>
 					<img style="align-self: center;" class="wow animate__animated animate__rotateInDownRight" src="media/Sin_titulo-2.png" width="40" height="18">
 				</div>
@@ -496,21 +496,21 @@
 			<div>
 				<ul class="footer__links">
 					<li>
-						<a href="">Acerca de Verux</a>
+						<a href="https://verux.gg/">Acerca de Verux</a>
 					</li>
 					<li>
-						<a href="">Ayudanos a mejorar</a>
+						<a type="button" data-toggle="modal" data-target="#modalNoticia">Ayudanos a mejorar</a>
 					</li>
 					<li>
-						<a href="">Servidores</a>
+						<a type="button" data-toggle="modal" data-target="#modalNoticia">Servidores</a>
 					</li>
 					<li>
-						<a href="">Soporte</a>
+						<a type="button" data-toggle="modal" data-target="#modalSoporte">Soporte</a>
 					</li>
 				</ul>
 			</div>
 			<div>
-				<a href=""><img src="media/logobase.png" width="40px"></a>
+				<a href="https://verux.gg/"><img src="media/logobase.png" width="40px"></a>
 			</div>
 			<div class="sitckyButtons">
 				<ul class="footer__socialLinks">
@@ -549,6 +549,47 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Modal Soporte -->
+	<div class="modal fade" id="modalSoporte" tabindex="-1" aria-labelledby="modalSoporteLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="modalSoporteLabel">Ponte en contacto con nosotros</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<form class="modal-body" action="">
+				<input id="get__nombre" type="text" placeholder="Nombre" name="name">
+				<br><br>
+				<input id="get__email" type="text" placeholder="Email" name="email">
+				<br><br>
+				<input id="get__asunto" type="text" placeholder="Asunto" name="asunto">
+				<br><br>
+				<textarea id="get__mensaje" name="mensaje" cols="40" rows="10"></textarea>
+				<br><br>
+				<input type="submit" value="Enviar" onclick="alertModal()">
+			</form>
+		</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="modalNoticiaLabel">¡Próximamente!</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body" style="text-transform: none;">
+			Lamentablemente, todavía no esta lista esta sección :(
+			</div>
+		</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
