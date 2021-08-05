@@ -145,7 +145,6 @@ a:hover {
 .logo {
   width: 40px;
   margin-top: -10px;
-  margin-left: 100px;
 }
 
 /* Header Centro */
@@ -375,6 +374,10 @@ a:hover {
   font-weight: 600;
 }
 
+.noticias--descripcion {
+  text-transform: none;
+}
+
 .noticias__fondo {
   background: url("../media/fondo-noticias.png") repeat-x;
   padding-bottom: 5vh;
@@ -557,10 +560,6 @@ footer div div {
   height: 100vh;
 }
 
-.info div {
-  padding-left: 9vh;
-}
-
 .info div p {
   padding-top: 3vh;
 }
@@ -654,7 +653,7 @@ footer div div {
 }
 
 .section__tabla div {
-  width: 90%;
+  width: 97%;
   margin: 0 auto;
   padding-bottom: 5vh;
   text-align: left;
@@ -716,8 +715,20 @@ footer div div {
   background: #010000;
 }
 
+.table__errtel table tbody tr td:nth-of-type(2n+1) {
+  background: #0F0C14;
+}
+
+.table__errtel table tbody tr td:nth-of-type(2n+2) {
+  background: #140C13;
+}
+
 .table__errtel table tbody tr td:hover {
-  background: #010000;
+  background: #221420;
+}
+
+.table__errtel--levels {
+  display: none;
 }
 
 /* personajes.html */
@@ -999,6 +1010,7 @@ footer div div {
   background-size: cover;
   background-position: center;
   height: 70vh;
+  background-position: initial !important;
 }
 
 .patch__titulo {
@@ -1161,6 +1173,53 @@ footer div div {
   background: url(../media/bg-news-top.jpg) top center no-repeat, url(../media/bg-news-repeat.jpg) repeat;
   border-radius: 0.75rem;
   max-width: 800px;
+}
+
+.tabla__rankings {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #333;
+  margin: 15px 0;
+}
+
+.tabla__rankings thead {
+  background: #010000;
+  border: 1px solid #333;
+}
+
+.tabla__rankings thead tr th {
+  width: 100%;
+  font-size: 12px;
+  color: #d5b402;
+  border: 1px solid #333;
+  width: auto;
+}
+
+.tabla__rankings tbody {
+  font-size: 12px;
+}
+
+.tabla__rankings tbody tr {
+  border: 1px solid #333;
+}
+
+.tabla__rankings tbody tr td {
+  border: 1px solid #333;
+  color: #a09d9d;
+  padding: 10px;
+  width: auto;
+}
+
+.tabla__rankings tbody tr:nth-of-type(2n+1) {
+  background: #0F0C14;
+}
+
+.tabla__rankings tbody tr:nth-of-type(2n+2) {
+  background: #140C13;
+}
+
+.tabla__rankings tbody tr:hover {
+  background: #221420;
 }
 
 .ranking {
@@ -1397,10 +1456,6 @@ footer div div {
   .header__button--register {
     width: 8vh !important;
   }
-  .section__home {
-    display: none;
-    min-height: none;
-  }
   .header__login {
     display: inline-block;
     width: 8vh;
@@ -1422,6 +1477,38 @@ footer div div {
     width: 100%;
     display: inline-block;
   }
+  .noticias {
+    display: block;
+  }
+  #noticia1 {
+    display: block;
+    width: 90%;
+    margin: 5vh auto;
+  }
+  #noticia2 {
+    display: block;
+    width: 90%;
+    margin: 5vh auto;
+  }
+  #noticia3 {
+    display: block;
+    width: 90%;
+    margin: 5vh auto;
+  }
+  #noticia4 {
+    display: block;
+    width: 90%;
+    margin: 5vh auto;
+  }
+  .noticias__imagen {
+    width: 89%;
+  }
+  .noticias--textoConteiner {
+    width: auto;
+  }
+  .noticias--descripcion {
+    margin: 5vh 0;
+  }
   .noticias__recientes {
     padding-top: 0;
   }
@@ -1432,6 +1519,7 @@ footer div div {
     -webkit-transform-origin: none;
             transform-origin: none;
     position: none;
+    font-size: 20px;
   }
   .noticias__titulo {
     width: none;
@@ -1439,6 +1527,9 @@ footer div div {
   }
   .noticias__articulos {
     display: block;
+  }
+  .noticias__side {
+    display: none;
   }
   .footer__links {
     display: block;
@@ -1475,10 +1566,107 @@ footer div div {
   .noticias-articulo-sm {
     margin: 3vh 0;
   }
+  .noticias-articulo-sm div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    width: 90%;
+  }
   .noticias-text .separador {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .section__tabla {
+    width: 100%;
+  }
+  .tabla__info tbody tr:nth-of-type(2n+1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tabla__info tbody tr:nth-of-type(2n+2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tabla__info--errtel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tabla__info--errtel tbody:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .table__errtel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .table__errtel table:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .table__errtel table:nth-child(1) tbody:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .table__errtel table:nth-child(1) tbody:nth-child(1) tr {
+    width: 50%;
+  }
+  .section__rankings--table {
+    width: 100%;
+  }
+  .gallery__section--wrapper {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+  .personajes__imagen img {
+    width: 90%;
+  }
+  .personajes__display {
+    display: block;
+  }
+  .personajes__display div {
+    width: 90%;
+    display: block;
+  }
+  .modalCustom {
+    display: none;
+  }
+  #btn-cerrarModal {
+    display: none;
   }
 }
 

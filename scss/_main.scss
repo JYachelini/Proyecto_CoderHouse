@@ -124,7 +124,6 @@ a{
 .logo{
     width: 40px;
     margin-top: -10px;
-    margin-left: 100px;
 }
 
 
@@ -279,6 +278,10 @@ a{
     font-weight: 600;
 }
 
+.noticias--descripcion{
+    text-transform: none;
+}
+
 .noticias__fondo{
     background: url("../media/fondo-noticias.png") repeat-x;
     padding-bottom: 5vh;
@@ -414,7 +417,6 @@ footer{
 .info{
     @include bg-image(url("../media/Kq2B0b.jpg"), 100vh);
     div{
-        padding-left: 9vh;
         p{
             padding-top: 3vh;
             &:nth-child(2){
@@ -475,7 +477,7 @@ footer{
     @include border-radius(0.75rem);
     background: url(../media/bg-news-top.jpg) top center no-repeat, url(../media/bg-news-repeat.jpg) repeat;
     div{
-        width: 90%;
+        width: 97%;
         margin: 0 auto;
         padding-bottom: 5vh;
         text-align: left;
@@ -528,10 +530,20 @@ footer{
     table tbody tr td{
         color: #d5b402;
         background: #010000;
+        &:nth-of-type(2n+1){
+            background: #0F0C14;
+        }
+        &:nth-of-type(2n+2){
+            background: #140C13;
+        }
         &:hover{
-            background: #010000;
+            background: #221420;
         }
     }
+}
+
+.table__errtel--levels{
+    display: none;
 }
 
 
@@ -733,6 +745,7 @@ footer{
 
 .patch__home{
     @include bg-image(url("../media/mu_forum_bg.jpg"), 70vh);
+    background-position: initial !important;
 }
 
 .patch__titulo{
@@ -849,6 +862,45 @@ footer{
     border-radius: 0.75rem;
     max-width: 800px;
 }
+.tabla__rankings{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #333;
+    margin: 15px 0;
+    thead{
+        background: #010000;
+        border: 1px solid #333;
+        tr th{
+            width: 100%;
+            font-size: 12px;
+            color: #d5b402;
+            border: 1px solid #333;
+            width: auto;
+        }
+    }
+    tbody{
+        font-size: 12px;
+        tr{
+            border: 1px solid #333;
+            td{
+                border: 1px solid #333;
+                color: #a09d9d;
+                padding: 10px;
+                width: auto;
+            }
+            &:nth-of-type(2n+1){
+                background: #0F0C14;
+            }
+            &:nth-of-type(2n+2){
+                background: #140C13;
+            }
+            &:hover{
+                background: #221420;
+            }
+        }
+    }
+}
+
 .ranking{
     margin: 25px auto 0 auto;
     width: 70%;
@@ -1054,10 +1106,6 @@ footer{
     .header__button--register{
     width: 8vh !important;
     }
-    .section__home{
-        display: none;
-        min-height: none;
-    }
     .header__login{
         display: inline-block;
         width: 8vh;
@@ -1079,6 +1127,38 @@ footer{
             display: inline-block;
         }
     }
+    .noticias{
+        display: block;
+    }
+    #noticia1{
+        display: block;
+        width: 90%;
+        margin: 5vh auto;
+    }
+    #noticia2{
+        display: block;
+        width: 90%;
+        margin: 5vh auto;
+    }
+    #noticia3{
+        display: block;
+        width: 90%;
+        margin: 5vh auto;
+    }
+    #noticia4{
+        display: block;
+        width: 90%;
+        margin: 5vh auto;
+    }
+    .noticias__imagen{
+        width: 89%;
+    }
+    .noticias--textoConteiner{
+        width: auto;
+    }
+    .noticias--descripcion{
+        margin: 5vh 0;
+    }
     .noticias__recientes{
         padding-top: 0;
     }
@@ -1087,6 +1167,7 @@ footer{
         transform: none;
         transform-origin: none;
         position: none;
+        font-size: 20px;
     }
     .noticias__titulo{
         width: none;
@@ -1094,6 +1175,9 @@ footer{
     }
     .noticias__articulos{
         display: block;
+    }
+    .noticias__side{
+        display: none;
     }
     .footer__links{
         display: block;
@@ -1126,8 +1210,64 @@ footer{
     }
     .noticias-articulo-sm{
         margin: 3vh 0;
+        div{
+            display: flex;
+            margin: auto;
+            width: 90%;
+        }
     }
     .noticias-text .separador{
         display: flex;
+    }
+    .section__tabla{
+        width: 100%;
+    }
+    .tabla__info tbody tr:nth-of-type(2n+1){
+        @include flexColumn;
+    }
+    .tabla__info tbody tr:nth-of-type(2n+2){
+        @include flexColumn;
+    }
+    .tabla__info--errtel{
+        @include flexColumn;
+        tbody:nth-child(2){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .table__errtel{
+        @include flexColumn;
+        table:nth-child(1){
+            @include flexColumn;
+            tbody:nth-child(1){
+                display: flex;
+                flex-wrap: wrap;
+                tr{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .section__rankings--table{
+        width: 100%;
+    }
+    .gallery__section--wrapper{
+        column-count: 1;
+    }
+    .personajes__imagen img{
+        width: 90%;
+    }
+    .personajes__display{
+        display: block;
+        div{
+            width: 90%;
+            display: block;
+        }
+    }
+    .modalCustom{
+        display: none;
+    }
+    #btn-cerrarModal{
+        display: none;
     }
 }

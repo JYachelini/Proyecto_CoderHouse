@@ -42,3 +42,8 @@
     background-position: center;
     height: $size;
 }
+
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+}
