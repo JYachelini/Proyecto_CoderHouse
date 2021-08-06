@@ -60,3 +60,17 @@
         }
     }
 }
+
+/* Phone */
+@media only screen and (max-width: 767px){
+    .section__logIn__form{
+        display: flex;
+        margin: auto;
+    }
+    #login{
+        background-size: auto;
+    }
+    #register{
+        background-size: auto;
+    }
+}

@@ -1558,6 +1558,22 @@ footer div div {
   color: #111111 !important;
 }
 
+/* Phone */
+@media only screen and (max-width: 767px) {
+  .section__logIn__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+  }
+  #login {
+    background-size: auto;
+  }
+  #register {
+    background-size: auto;
+  }
+}
+
 /* ranking.html */
 .ranking__home {
   background-image: url("../media/image.jpg");
