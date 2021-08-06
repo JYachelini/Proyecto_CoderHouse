@@ -1,0 +1,83 @@
+@import "mixin";
+@import "variables";
+
+
+/* Footer */
+footer{
+    background: $bg-color-default;
+    @include border(2px, $border-color-default);
+    div div{
+        margin: 40px auto;
+    }
+}
+
+.footer__links{
+    color: white;
+    @include footer;
+    li{
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+        color: #7e7e7e;
+        font-weight: 800;
+        text-transform: uppercase;
+        a{
+            margin: 0 16px;
+            color: #7e7e7e;
+        }
+    }
+}
+
+.footer__socialLinks{
+    @include footer;
+    li{
+        margin: 0 10px;
+        a{
+            color: #595959;
+            i{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.footer__derechos{
+    text-transform: none !important;
+    p{
+        color: #595959;
+    }
+}
+
+.footer__legalLinks{
+    @include footer;
+    li{
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        a{
+            font-size: 8px;
+            font-weight: 300;
+            text-decoration-line: underline;
+            color: #9d9797;
+            margin: 0 16px;
+        }
+    }
+}
+
+// Phone
+@media only screen and (max-width: 767px){
+    .footer__links{
+        display: block;
+        justify-content: none;
+        li{
+            margin: 10px;
+        }
+    }
+    footer{
+        height: auto;
+        div div{
+            margin: 40px auto 0 auto;
+        }
+    }
+    .footer__legalLinks{
+        flex-wrap: wrap;
+    }
+}

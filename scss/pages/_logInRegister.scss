@@ -1,0 +1,62 @@
+@import "../mixin";
+@import "../variables";
+
+
+
+/* login.html y register.html*/
+#login{
+    background-image: url(../media/image-2.jpg) ;
+    background-size: cover;
+}
+
+.header__login{
+    display: flex;
+}
+
+.section__form{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.section__logIn__form{
+    background-color: #f9f9f9;
+    color: #111111;
+    margin: 130px;
+    max-width: 300px;
+    &:nth-child(1){
+        padding: 3rem 2rem;
+    }
+}
+
+.section__title{
+    padding-bottom: 4rem;
+    span{
+        font-size: 30px;
+    }
+}
+
+.flecha{
+    margin: 20px;
+    font-size: 30px;
+}
+
+#register{
+    background-image: url(../media/image-3.jpg) ;
+    background-size: cover;
+}
+
+.section__bottom{
+    div a{
+        color: rgb(56, 51, 51);
+        &:hover{
+            color: #111111 !important;
+        }
+    }
+    div span a{
+        color: rgb(97, 89, 89);
+        font-weight: 600;
+        &:hover{
+            color: #111111 !important;
+        }
+    }
+}

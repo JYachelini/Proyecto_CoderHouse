@@ -1,0 +1,120 @@
+@import "../mixin";
+@import "../variables";
+
+
+/* ranking.html */
+.ranking__home{
+    @include bg-image(url("../media/image.jpg"), 100vh);
+    section{
+        font-size: 40px;
+        display: flex;
+        height: 100%;
+        div{
+            margin: auto;
+            background-color: #111111;
+            border-radius: .75rem;
+            width: 250px;
+            border: 2px solid wheat;
+            transition: .4s;
+            &:hover{
+                filter: brightness(120%);
+                background-color: #1b1b1b;
+                transition: .4s;
+            }
+            a{
+                margin: 0 !important;
+                color: wheat;
+                &:hover{
+                    color: wheat !important;
+                }
+            }
+        }
+    }
+}
+.section__rankings{
+    padding: 5vh 0 5vh 0;
+    background: #070813;
+}
+.section__rankings--table{
+    height: 80vh;
+    width: 50%;
+    margin: 0 auto 5vh auto;
+    background: url(../media/bg-news-top.jpg) top center no-repeat, url(../media/bg-news-repeat.jpg) repeat;
+    border-radius: 0.75rem;
+    max-width: 800px;
+}
+.tabla__rankings{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #333;
+    margin: 15px 0;
+    thead{
+        background: #010000;
+        border: 1px solid #333;
+        tr th{
+            width: 100%;
+            font-size: 12px;
+            color: #d5b402;
+            border: 1px solid #333;
+            width: auto;
+        }
+    }
+    tbody{
+        font-size: 12px;
+        tr{
+            border: 1px solid #333;
+            td{
+                border: 1px solid #333;
+                color: #a09d9d;
+                padding: 10px;
+                width: auto;
+            }
+            &:nth-of-type(2n+1){
+                background: #0F0C14;
+            }
+            &:nth-of-type(2n+2){
+                background: #140C13;
+            }
+            &:hover{
+                background: #221420;
+            }
+        }
+    }
+}
+
+.ranking{
+    margin: 25px auto 0 auto;
+    width: 70%;
+    border: 1px solid black;
+    td{
+        border-right: 1px solid black;
+    }
+}
+
+.ranking__types{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    padding-top: 5vh;
+    a{
+        color: #d5b402;
+        background: #0f0c14;
+        border: 1px solid #333;
+        border-radius: .75rem;
+        width: 18vh;
+        cursor: pointer;
+        &:hover{
+            color: #ffd805 !important;
+            filter: brightness(120%);
+        }
+    }
+}
+
+
+// Phone
+@media only screen and (max-width: 767px){
+    .section__rankings--table{
+        width: 100%;
+    }
+}

@@ -1,0 +1,102 @@
+@import "../mixin";
+@import "../variables";
+
+
+/* personajes.html */
+.personajes__home{
+    @include bg-image(url("../media/bg_main_media.jpg"), 100vh);
+}
+
+.personajes__title{
+    padding-top: 10vh;
+    h1{
+        font-size: 40px;
+        color: wheat;
+        margin-bottom: 0;
+    }
+}
+
+.personajes__imagen{
+    padding-top: 11vh;
+    img{
+        width: 50%;
+    }
+}
+
+.personajes__bg{
+    background: linear-gradient(to bottom,  rgb(0,0,0) 0%,rgb(17,17,17) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.personajes{
+    display: inline-block;
+    width: 80%;
+    margin: 25px auto;
+}
+
+.personajes__display{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+    div{
+        background-color: #111111d6;
+        width: calc(20% - 20px);
+        background-size: cover;
+        margin: 5vh 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        h5{
+            background: #010000;
+            color: #d5b402;
+            border-radius: .75rem .75rem 0 0;
+            border-bottom: 2px solid rgb(88, 87, 87);
+            margin-bottom: 0;
+        }
+        a {
+            display: block;
+            transform: scale3d(1.0, 1.0, 1);
+            transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            margin: auto;
+            img{
+            width: 100%;
+            bottom: -10px;
+            position: relative;
+            }
+            &:hover{
+                transform: scale3d(0.9, 0.9, 1);
+            }
+        }
+    }
+}
+
+.dk a img{
+    left: 10px;
+}
+
+.mg a img{
+    width: 125% !important;
+}
+
+.slayer a img{
+    bottom: -15px !important;
+}
+
+.gc{
+    width: 70% !important;
+}
+
+// Phone
+@media only screen and (max-width: 767px){
+    .personajes__imagen img{
+        width: 90%;
+    }
+    .personajes__display{
+        display: block;
+        div{
+            width: 90%;
+            display: block;
+        }
+    }
+}

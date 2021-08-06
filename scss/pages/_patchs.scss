@@ -1,0 +1,40 @@
+@import "../mixin";
+@import "../variables";
+
+
+/* patchs.html */
+
+.patch__home{
+    @include bg-image(url("../media/mu_forum_bg.jpg"), 70vh);
+    background-position: initial !important;
+}
+
+.patch__titulo{
+    @include banner;
+}
+
+.patch__titulo--text{
+    display: flex;
+    font-style: italic;
+    height: 100%;
+    align-items: center;
+    & span{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.patchs__description--text{
+    padding-top: 15px;
+    p{
+        margin-bottom: 0;
+        &:nth-child(1){
+            color: #e20b0b;
+            font-size: 10px;
+        }
+        &:nth-child(2){
+            font-weight: 800;
+            font-size: 20px;
+        }
+    }
+}

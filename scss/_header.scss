@@ -1,0 +1,229 @@
+@import "mixin";
+@import "variables";
+
+
+/* Barra de navegación */
+.header{
+    background-color: $bg-color-default;
+    height: 10vh;
+    border-bottom: 2px solid $border-color-default;
+}
+
+.navBar{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0 0 !important;
+    min-height: 5vh;
+}
+
+.logo{
+    width: 40px;
+    margin-top: -10px;
+}
+
+
+/* Header Centro */
+.header__menu{
+    @include header;
+    li{
+        height: 100%;
+        &:hover{
+            border-bottom: 2px solid $border-color-hover;
+            transition: .4s;
+        }
+        a{
+            color: rgb(160, 157, 157);
+            font-size: 12px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            &:hover{
+                color: rgb(255, 255, 255);
+                transition: .5s;
+                transform: scale(1.1);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+/* Header Derecho */
+.header__accounts{
+    @include header;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    div{
+        width: 7vh;
+        height: 50%;
+        display: grid;
+        align-items: center;
+    }
+}
+
+.header--text{
+    @media only screen and(min-width: 768px){
+        height: 100% !important;
+    }
+}
+
+.header__button--register{
+    width: 14vh !important;
+    border-radius: 2px;
+    background-color: #E20B0B !important;
+    cursor: pointer;
+    &:hover{
+        background-color: #cf0000 !important;
+    }
+}
+
+.header__login{
+    color: white;
+    font-size: 12px;
+}
+
+.header__register{
+    color: white;
+    font-size: 12px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .header__menu{
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        li{
+            margin: 0;
+            border: 1px solid black;
+            background-color: #20202099;
+            width: 100%;
+            display: inline-block;
+            a{
+                color: white;
+                font-size: 20px;
+                display: block;
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+    }
+    .header{
+        height: auto;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        float: none;
+        margin: 0;
+    }
+    .header__accounts{
+        display: flex;
+        margin: 2vh 0;
+        justify-content: space-around;
+        width: 100%;
+        div{
+            width: 20vh !important;
+            height: 8vh;
+            background-color: #20202099;
+            border: 1px solid black;
+        }
+    }
+    .header__login{
+        display: inline-block;
+        margin: auto;
+    }
+    .header__register{
+        display: inline-block;
+        margin: auto;
+        height: auto;
+    }
+    .dropdown--custom{
+        width: 8vh !important;
+    }
+    .dropdownCustom{
+        color: white !important;
+    }
+}
+
+// Phone
+@media only screen and (max-width: 767px){
+    .header{
+        min-height: 5vh;
+        height: auto;
+    }
+    .header__menu{
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        li{
+            margin: 0;
+            border: 1px solid black;
+            background-color: #20202099;
+            width: 100%;
+            display: inline-block;
+            a{
+                color: white;
+                font-size: 20px;
+                display: block;
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+    }
+    .navBar{
+        justify-content: flex-end;
+        min-height: 5vh;
+        div:nth-child(1){
+            width: 80%;
+        }
+    }
+    .flex{
+        display: inline-block;
+    }
+    .logo{
+        float: none;
+        margin: 0;
+    }
+    .header__accounts{
+        display: flex;
+        margin: 2vh 0;
+        justify-content: space-around;
+        width: 100%;
+        div{
+            width: 20vh !important;
+            height: 8vh;
+            background-color: #20202099;
+            border: 1px solid black;
+        }
+    }
+    .header__button--register{
+    width: 8vh !important;
+    }
+    .header__login{
+        display: inline-block;
+        margin: auto;
+    }
+    .header__register{
+        display: inline-block;
+        margin: auto;
+        height: auto;
+    }
+    .navbar-margin-xs{
+        margin: 5vh 0;
+    }
+    .dropdown--custom{
+        color: white !important;
+    }
+}
