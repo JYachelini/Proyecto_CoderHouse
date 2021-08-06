@@ -1515,7 +1515,7 @@ footer div div {
 .section__logIn__form {
   background-color: #f9f9f9;
   color: #111111;
-  margin: 130px;
+  margin: auto;
   max-width: 300px;
 }
 
