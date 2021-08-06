@@ -87,6 +87,7 @@ a{
     }
 }
 
+
 .show{
     z-index: 10;
 }
@@ -1348,5 +1349,9 @@ footer{
     }
     #btn-cerrarModal{
         display: none;
+    }
+    .go-top-conteiner{
+        bottom: 2rem;
+        right: 1rem;
     }
 }

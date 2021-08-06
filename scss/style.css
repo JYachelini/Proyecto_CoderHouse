@@ -1767,6 +1767,10 @@ footer div div {
   #btn-cerrarModal {
     display: none;
   }
+  .go-top-conteiner {
+    bottom: 2rem;
+    right: 1rem;
+  }
 }
 
 #side1 {
