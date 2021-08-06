@@ -69,7 +69,6 @@ a:hover {
   width: 0rem;
   height: 0rem;
   background: #e4e4e4;
-  border: 2px solid black;
   border-radius: 50%;
   cursor: pointer;
   top: 50%;
@@ -93,11 +92,11 @@ a:hover {
   transition: .2s;
 }
 
-.show {
+.showGoTop {
   z-index: 10;
 }
 
-.show .go-top-button {
+.showGoTop .go-top-button {
   -webkit-animation: popup .3s ease-in-out;
           animation: popup .3s ease-in-out;
   width: 2.6rem;
@@ -105,7 +104,7 @@ a:hover {
   z-index: 11;
 }
 
-.show i {
+.showGoTop i {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
 }

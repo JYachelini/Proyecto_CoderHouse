@@ -68,7 +68,6 @@ a{
     width: 0rem;
     height: 0rem;
     background: #e4e4e4;
-    border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
     top: 50%;
@@ -88,18 +87,18 @@ a{
 }
 
 
-.show{
+.showGoTop{
     z-index: 10;
 }
 
-.show .go-top-button{
+.showGoTop .go-top-button{
     animation: popup .3s ease-in-out;
     width: 2.6rem;
     height: 2.6rem;
     z-index: 11;
 }
 
-.show i{
+.showGoTop i{
     transform: translate(-50%, -50%) scale(1);
 }
 
