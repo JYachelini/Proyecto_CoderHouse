@@ -1420,6 +1420,10 @@ footer div div {
           justify-content: space-between;
 }
 
+.noticias--texto h2, .noticias--texto span:nth-child(1) {
+  font-weight: 600;
+}
+
 .noticias--textoConteiner {
   width: 50%;
   margin: 2vh;
