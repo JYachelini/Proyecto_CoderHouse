@@ -423,6 +423,14 @@ footer div div {
   height: 100%;
 }
 
+.header__menu li:nth-child(7) {
+  display: none;
+}
+
+.header__menu li:nth-child(8) {
+  display: none;
+}
+
 .header__menu li:hover {
   border-bottom: 2px solid #cf0000 !important;
   -webkit-transition: .4s;
@@ -561,12 +569,25 @@ footer div div {
     width: 100%;
     display: inline-block;
   }
+  .header__menu li:nth-child(6) {
+    display: none !important;
+  }
+  .header__menu li:nth-child(7) {
+    display: inline-block !important;
+  }
+  .header__menu li:nth-child(8) {
+    display: inline-block !important;
+  }
   .header__menu li a {
     color: white;
     font-size: 20px;
     display: block;
     text-align: left;
     padding-left: 15px;
+  }
+  .header__menu li a:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .header {
     height: auto;
@@ -613,6 +634,9 @@ footer div div {
   .dropdown--custom {
     width: 8vh !important;
   }
+  .dropdown_custom {
+    width: 100%;
+  }
   .dropdownCustom {
     color: white !important;
   }
@@ -632,6 +656,7 @@ footer div div {
         flex-wrap: wrap;
     width: 100%;
     padding: 0;
+    min-width: auto;
   }
   .header__menu li {
     margin: 0;
@@ -639,6 +664,15 @@ footer div div {
     background-color: #20202099;
     width: 100%;
     display: inline-block;
+  }
+  .header__menu li:nth-child(6) {
+    display: none !important;
+  }
+  .header__menu li:nth-child(7) {
+    display: inline-block !important;
+  }
+  .header__menu li:nth-child(8) {
+    display: inline-block !important;
   }
   .header__menu li a {
     color: white;
@@ -695,6 +729,38 @@ footer div div {
   }
   .dropdown--custom {
     color: white !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navBar div:nth-child(1) {
+    width: 100%;
+  }
+  .header__menu li a {
+    text-align: center;
+  }
+  .header__accounts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 1px;
+    padding: 0;
+  }
+  .header__accounts div {
+    margin: 5px 0;
+  }
+  .noticias__titulo--text {
+    font-size: 17px !important;
+  }
+  .section__socialMedia {
+    font-size: 16px !important;
   }
 }
 
@@ -983,18 +1049,21 @@ footer div div {
 .galery__home div {
   font-size: 40px;
   color: wheat;
-  text-align: left;
-  padding-top: 50vh;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .galery__home div span {
-  display: block;
   margin-left: 15vh;
   background: #111111;
   width: 25vh;
   border: 2px solid wheat;
   border-radius: .75rem;
-  text-align: center;
 }
 
 .galery__section {
@@ -1045,6 +1114,18 @@ footer div div {
   .gallery__section--wrapper {
     -webkit-column-count: 1;
             column-count: 1;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .galery__home div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+  .galery__home div span {
+    margin: auto;
   }
 }
 
@@ -1784,8 +1865,17 @@ footer div div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 5px;
+    margin: 5px 0;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .tabla__rankings thead tr th:nth-child(2) {
+    display: none;
+  }
+  .tabla__rankings tbody tr td:nth-child(2) {
+    display: none;
   }
 }
 
@@ -1908,6 +1998,12 @@ footer div div {
   .personajes__display div {
     width: 90%;
     display: block;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .personajes__title h1 {
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

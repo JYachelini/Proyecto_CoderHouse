@@ -10,16 +10,15 @@
     div{
         font-size: 40px;
         color: wheat;
-        text-align: left;
-        padding-top: 50vh;
+        height: 100%;
+        align-items: center;
+        display: flex;
         span{
-            display: block;
             margin-left: 15vh;
             background: #111111;
             width: 25vh;
             border: 2px solid wheat;
             border-radius: .75rem;
-            text-align: center;
         }
     }
 }
@@ -63,5 +62,15 @@
 @media only screen and (max-width: 767px){
     .gallery__section--wrapper{
         column-count: 1;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .galery__home div{
+        display: flex;
+        height: 100%;
+        span{
+            margin: auto;
+        }
     }
 }

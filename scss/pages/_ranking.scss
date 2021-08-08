@@ -122,7 +122,18 @@
     .ranking__types{
         flex-direction: column;
         align-items: center;
-        margin: 5px;
+        margin: 5px 0;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .tabla__rankings{
+        thead tr th:nth-child(2){
+            display: none;
+        }
+        tbody tr td:nth-child(2){
+            display: none;
+        }
     }
 }

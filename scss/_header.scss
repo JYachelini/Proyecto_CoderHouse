@@ -29,6 +29,12 @@
     min-width: 675px;
     li{
         height: 100%;
+        &:nth-child(7){
+            display: none;
+        }
+        &:nth-child(8){
+            display: none;
+        }
         &:hover{
             border-bottom: 2px solid $border-color-hover;
             transition: .4s;
@@ -139,12 +145,24 @@
             background-color: #20202099;
             width: 100%;
             display: inline-block;
+            &:nth-child(6){
+                display: none !important;
+            }
+            &:nth-child(7){
+                display: inline-block !important;
+            }
+            &:nth-child(8){
+                display: inline-block !important;
+            }
             a{
                 color: white;
                 font-size: 20px;
                 display: block;
                 text-align: left;
                 padding-left: 15px;
+                &:hover{
+                    transform: scale(1.0);
+                }
             }
         }
     }
@@ -186,6 +204,9 @@
     .dropdown--custom{
         width: 8vh !important;
     }
+    .dropdown_custom{
+        width: 100%;
+    }
     .dropdownCustom{
         color: white !important;
     }
@@ -203,12 +224,22 @@
         flex-wrap: wrap;
         width: 100%;
         padding: 0;
+        min-width: auto;
         li{
             margin: 0;
             border: 1px solid black;
             background-color: #20202099;
             width: 100%;
             display: inline-block;
+            &:nth-child(6){
+                display: none !important;
+            }
+            &:nth-child(7){
+                display: inline-block !important;
+            }
+            &:nth-child(8){
+                display: inline-block !important;
+            }
             a{
                 color: white;
                 font-size: 20px;
@@ -261,5 +292,31 @@
     }
     .dropdown--custom{
         color: white !important;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .navBar{
+        flex-direction: column;
+        div:nth-child(1){
+            width: 100%;
+        }
+    }
+    .header__menu li a{
+        text-align: center;
+    }
+    .header__accounts{
+        flex-direction: column;
+        min-width: 1px;
+        padding: 0;
+    }
+    .header__accounts div{
+        margin: 5px 0;
+    }
+    .noticias__titulo--text{
+        font-size: 17px !important;
+    }
+    .section__socialMedia{
+        font-size: 16px !important;
     }
 }
