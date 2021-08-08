@@ -1785,6 +1785,7 @@ footer div div {
         -ms-flex-align: center;
             align-items: center;
     margin: 5px;
+    width: 100%;
   }
 }
 
