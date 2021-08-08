@@ -25,6 +25,25 @@ a:hover {
   text-decoration: none;
 }
 
+button, input {
+  outline: none;
+  border-radius: .4rem;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+textarea {
+  border-radius: .5rem;
+  border: 1px solid #333;
+  outline: none;
+  resize: none;
+  text-align: center;
+}
+
+.modal-body input:nth-last-child(1) {
+  padding: 0 15px;
+}
+
 .fab:hover {
   color: white;
   -webkit-transition: .4s;
@@ -397,6 +416,7 @@ footer div div {
           justify-content: space-evenly;
   margin-bottom: 0 !important;
   height: 100%;
+  min-width: 675px;
 }
 
 .header__menu li {
@@ -421,6 +441,8 @@ footer div div {
           align-items: center;
   font-weight: 800;
   letter-spacing: 0.1em;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .header__menu li a:hover {
@@ -448,6 +470,7 @@ footer div div {
   height: 100%;
   font-weight: 800;
   letter-spacing: 0.1em;
+  min-width: 300px;
 }
 
 .header__accounts div {
@@ -467,10 +490,11 @@ footer div div {
 }
 
 .header__button--register {
-  width: 14vh !important;
+  width: auto !important;
   border-radius: 2px;
   background-color: #E20B0B !important;
   cursor: pointer;
+  padding: 0 1.5rem;
 }
 
 .header__button--register:hover {
@@ -491,6 +515,32 @@ footer div div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.dropdown__menu--custom a:nth-child(3) {
+  display: none;
+}
+
+.dropdown__menu--custom a:nth-child(4) {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1300px) {
+  .header__menu {
+    min-width: auto;
+  }
+  .header__menu li:nth-child(4) {
+    display: none;
+  }
+  .header__menu li:nth-child(5) {
+    display: none;
+  }
+  .dropdown__menu--custom a:nth-child(3) {
+    display: block;
+  }
+  .dropdown__menu--custom a:nth-child(4) {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -520,6 +570,9 @@ footer div div {
   }
   .header {
     height: auto;
+  }
+  .separador {
+    margin: 10px !important;
   }
   .flex {
     display: -webkit-box;
@@ -1059,7 +1112,7 @@ footer div div {
 }
 
 .section__info {
-  padding-top: 5vh;
+  padding: 5vh 0;
   background: #070813;
 }
 

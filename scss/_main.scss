@@ -24,6 +24,24 @@ a{
     }
 }
 
+button, input{
+    outline: none;
+    border-radius: .4rem;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+textarea{
+    border-radius: .5rem;
+    border: 1px solid #333;
+    outline: none;
+    resize: none;
+    text-align: center;
+}
+
+.modal-body input:nth-last-child(1){
+    padding: 0 15px;
+}
 
 .fab:hover{
     color: white;

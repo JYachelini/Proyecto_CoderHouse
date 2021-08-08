@@ -26,6 +26,7 @@
 /* Header Centro */
 .header__menu{
     @include header;
+    min-width: 675px;
     li{
         height: 100%;
         &:hover{
@@ -40,6 +41,7 @@
             align-items: center;
             font-weight: 800;
             letter-spacing: 0.1em;
+            transition: .4s;
             &:hover{
                 color: rgb(255, 255, 255);
                 transition: .5s;
@@ -55,6 +57,7 @@
     @include header;
     font-weight: 800;
     letter-spacing: 0.1em;
+    min-width: 300px;
     div{
         width: 7vh;
         height: 50%;
@@ -70,10 +73,11 @@
 }
 
 .header__button--register{
-    width: 14vh !important;
+    width: auto !important;
     border-radius: 2px;
     background-color: #E20B0B !important;
     cursor: pointer;
+    padding: 0 1.5rem;
     &:hover{
         background-color: #cf0000 !important;
     }
@@ -92,7 +96,36 @@
     align-items: center;
 }
 
+.dropdown__menu--custom{
+    & a:nth-child(3){
+        display: none;
+    }
+    & a:nth-child(4){
+        display: none;
+    }
+}
+
 // Tablet
+@media only screen and (min-width: 992px) and (max-width: 1300px){
+    .header__menu{
+        min-width: auto;
+        & li:nth-child(4){
+            display: none;
+        }
+        & li:nth-child(5){
+            display: none;
+        }
+    }
+    .dropdown__menu--custom{
+        & a:nth-child(3){
+            display: block;
+        }
+        & a:nth-child(4){
+            display: block;
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px){
     .header__menu{
         display: flex;
@@ -117,6 +150,9 @@
     }
     .header{
         height: auto;
+    }
+    .separador{
+        margin: 10px !important;
     }
     .flex{
         display: flex;
