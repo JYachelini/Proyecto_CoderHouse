@@ -94,16 +94,18 @@
 .ranking__types{
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 70%;
     padding-top: 5vh;
+    flex-wrap: wrap;
     a{
-        color: #d5b402;
+        color: #d5b402 !important;
         background: #0f0c14;
         border: 1px solid #333;
         border-radius: .75rem;
         width: 18vh;
         cursor: pointer;
+        margin: 5px;
         &:hover{
             color: #ffd805 !important;
             filter: brightness(120%);
@@ -116,5 +118,10 @@
 @media only screen and (max-width: 767px){
     .section__rankings--table{
         width: 100%;
+    }
+    .ranking__types{
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
     }
 }
