@@ -9,8 +9,21 @@
     background-size: cover;
 }
 
-.header__login{
+.header__loginRegister{
     display: flex;
+    flex-direction: column;
+    & a:nth-child(1){
+        display: flex;
+    }
+    & a:nth-child(2){
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 10px auto;
+        color: white;
+        font-size: 12px;
+        text-decoration: underline !important;
+    }
 }
 
 .section__form{
@@ -29,7 +42,7 @@
 }
 
 .section__title{
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     span{
         font-size: 30px;
     }

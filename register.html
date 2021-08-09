@@ -23,8 +23,9 @@
 	<link rel="stylesheet" href="css/fonts.css"/>
 </head>
 <body id="register">
-	<div class="header__login">
+	<div class="header__loginRegister">
 		<a href="index.html"><img src="media/logobase.png" alt="" width="120px"></a>
+		<a href="index.html">Volver al menú principal</a>
 	</div>
 	<div class="section__form">
 		<div class="section__logIn__form border">
@@ -51,12 +52,33 @@
 						<a href="index.html" onclick="alertModalRegister()"><i class="fas fa-arrow-circle-right"></i></a>
 					</div>
 					<div>
-						<span>Al registrarse acepta los <a href="">Terminos y condiciones</a></span>
+						<span>Al registrarse acepta los <a type="button" data-toggle="modal" data-target="#modalNoticia">Terminos y condiciones</a></span>
+					</div>
+					<div>
+						<span>¿Ya tienes cuenta?<a href="login.html"> Ingresa aquí</a></span>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="modalNoticiaLabel">¡Próximamente!</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body" style="text-transform: none;">
+			Lamentablemente, todavía no esta lista esta sección :(
+			</div>
+		</div>
+		</div>
+	</div>
 	<script src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
